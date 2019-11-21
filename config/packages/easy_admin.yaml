@@ -1,6 +1,6 @@
-#easy_admin:
-#    entities:
-#        # List the entity class name you want to manage
-#        - App\Entity\Product
-#        - App\Entity\Category
-#        - App\Entity\User
+easy_admin:
+    entities:
+        - App\Entity\Page
+        - App\Entity\Block
+        - App\Entity\Txt
+        - App\Entity\Language
