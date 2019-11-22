@@ -36,6 +36,11 @@ class Txt
      */
     private $language;
 
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $txt;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -85,6 +90,18 @@ class Txt
     public function setLanguage(?Language $language): self
     {
         $this->language = $language;
+
+        return $this;
+    }
+
+    public function getTxt(): ?string
+    {
+        return $this->txt;
+    }
+
+    public function setTxt(string $txt): self
+    {
+        $this->txt = $txt;
 
         return $this;
     }
