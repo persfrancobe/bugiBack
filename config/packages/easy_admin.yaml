@@ -2,12 +2,29 @@ easy_admin:
     entities:
         Page:
             class: App\Entity\Page
+            form:
+                fields:
+                    - { property: 'name'}
+                    - { property: 'blocks'}
+                    - { property: 'txts'}
         Block:
             class: App\Entity\Block
+            form:
+                fields:
+                    - { property: 'name'}
+                    - { property: 'language'}
         Txt:
             class: App\Entity\Txt
+            form:
+                fields:
+                    - { property: 'name'}
+                    - { property: 'language'}
         Language:
             class: App\Entity\Language
+            form:
+                fields:
+                    - { property: 'name'}
+                    - { property: 'shortName'}
         Template:
             class: App\Entity\Template
             form:
