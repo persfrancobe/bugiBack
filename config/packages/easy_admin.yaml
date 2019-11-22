@@ -1,6 +1,15 @@
 easy_admin:
     entities:
-        - App\Entity\Page
-        - App\Entity\Block
-        - App\Entity\Txt
-        - App\Entity\Language
+        Page:
+            class: App\Entity\Page
+        Block:
+            class: App\Entity\Block
+        Txt:
+            class: App\Entity\Txt
+        Language:
+            class: App\Entity\Language
+        Template:
+            class: App\Entity\Template
+            form:
+                fields:
+                    - { property: 'core', type: 'fos_ckeditor' }
