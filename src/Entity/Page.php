@@ -38,6 +38,10 @@ class Page
         $this->blocks = new ArrayCollection();
         $this->txts = new ArrayCollection();
     }
+    public function __toString()
+    {
+        return $this->getName();
+    }
 
     public function getId(): ?int
     {

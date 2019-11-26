@@ -37,6 +37,10 @@ class Language
     {
         $this->txts = new ArrayCollection();
     }
+    public function __toString()
+    {
+        return $this->getShortName();
+    }
 
     public function getId(): ?int
     {

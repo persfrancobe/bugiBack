@@ -19,6 +19,7 @@ easy_admin:
                 fields:
                     - { property: 'name'}
                     - { property: 'language'}
+                    - { property: 'txt'}
         Language:
             class: App\Entity\Language
             form:
