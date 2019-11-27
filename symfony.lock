@@ -121,6 +121,9 @@
     "friendsofsymfony/user-bundle": {
         "version": "v2.1.2"
     },
+    "froala/wysiwyg-editor": {
+        "version": "v3.0.6"
+    },
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
     },
