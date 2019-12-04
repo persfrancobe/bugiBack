@@ -36,6 +36,11 @@ class Template
      */
     private $tmpAfter;
 
+    /**
+     * @ORM\Column(type="date", nullable=true)
+     */
+    private $lastUpdate;
+
     public function __toString()
     {
         return $this->getName();
@@ -90,6 +95,18 @@ class Template
     public function setTmpAfter(string $tmpAfter): self
     {
         $this->tmpAfter = $tmpAfter;
+
+        return $this;
+    }
+
+    public function getLastUpdate(): ?\DateTimeInterface
+    {
+        return $this->lastUpdate;
+    }
+
+    public function setLastUpdate(?\DateTimeInterface $lastUpdate): self
+    {
+        $this->lastUpdate = $lastUpdate;
 
         return $this;
     }

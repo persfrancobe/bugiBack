@@ -53,8 +53,9 @@ class PageController extends AbstractController
      */
     public function show(Page $page): Response
     {
-        $template = $twig->createTemplate('hello {{ name }}');
-        return  echo $template->render(['name' => 'Fabien']);
+        return $this->render('page/show.html.twig', [
+            'page' => $page,
+        ]);
     }
 
     /**

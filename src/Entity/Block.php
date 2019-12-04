@@ -33,6 +33,11 @@ class Block
      */
     private $txts;
 
+    /**
+     * @ORM\OneToOne(targetEntity="App\Entity\Template", cascade={"persist", "remove"})
+     */
+    private $template;
+
     public function __construct()
     {
         $this->txts = new ArrayCollection();
@@ -99,6 +104,18 @@ class Block
                 $txt->setBlock(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getTemplate(): ?Template
+    {
+        return $this->template;
+    }
+
+    public function setTemplate(?Template $template): self
+    {
+        $this->template = $template;
 
         return $this;
     }

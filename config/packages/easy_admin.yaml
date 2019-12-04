@@ -14,6 +14,7 @@ easy_admin:
                 fields:
                     - { property: 'name', type: }
                     - { property: 'txts'}
+                    - { property: 'template'}
         Txt:
             class: App\Entity\Txt
             form:
