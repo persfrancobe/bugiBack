@@ -3,5 +3,5 @@
 {% block title %}Page{% endblock %}
 
 {% block body %}
-    {% include 'page/_page_template.html.twig' with {'page': page} %}
+    {{ include(template_from_string(page.template.core|raw)) }}
 {% endblock %}

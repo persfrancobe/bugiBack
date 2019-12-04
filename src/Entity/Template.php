@@ -26,6 +26,16 @@ class Template
      */
     private $core;
 
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $tmpBefor;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $tmpAfter;
+
     public function __toString()
     {
         return $this->getName();
@@ -56,6 +66,30 @@ class Template
     public function setCore(string $core): self
     {
         $this->core = $core;
+
+        return $this;
+    }
+
+    public function getTmpBefor(): ?string
+    {
+        return $this->tmpBefor;
+    }
+
+    public function setTmpBefor(string $tmpBefor): self
+    {
+        $this->tmpBefor = $tmpBefor;
+
+        return $this;
+    }
+
+    public function getTmpAfter(): ?string
+    {
+        return $this->tmpAfter;
+    }
+
+    public function setTmpAfter(string $tmpAfter): self
+    {
+        $this->tmpAfter = $tmpAfter;
 
         return $this;
     }

@@ -33,3 +33,5 @@ easy_admin:
                 fields:
                     - { property: 'name' }
                     - { property: 'core' }
+                    - { property: 'tmpBefor' }
+                    - { property: 'tmpAfter' }
