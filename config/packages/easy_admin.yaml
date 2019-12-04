@@ -2,14 +2,36 @@ easy_admin:
     entities:
         Page:
             class: App\Entity\Page
+            form:
+                fields:
+                    - { property: 'name'}
+                    - { property: 'blocks' }
+                    - { property: 'txts'}
+                    - { property: 'template'}
         Block:
             class: App\Entity\Block
+            form:
+                fields:
+                    - { property: 'name', type: }
+                    - { property: 'txts'}
         Txt:
             class: App\Entity\Txt
+            form:
+                fields:
+                    - { property: 'name',}
+                    - { property: 'language'}
+                    - { property: 'txt'}
         Language:
             class: App\Entity\Language
+            form:
+                fields:
+                    - { property: 'name', type: }
+                    - { property: 'shortName'}
         Template:
             class: App\Entity\Template
             form:
                 fields:
-                    - { property: 'core', type: 'fos_ckeditor' }
+                    - { property: 'name' }
+                    - { property: 'core' }
+                    - { property: 'tmpBefor' }
+                    - { property: 'tmpAfter' }

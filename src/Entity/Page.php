@@ -33,10 +33,19 @@ class Page
      */
     private $txts;
 
+    /**
+     * @ORM\OneToOne(targetEntity="App\Entity\Template", cascade={"persist", "remove"})
+     */
+    private $template;
+
     public function __construct()
     {
         $this->blocks = new ArrayCollection();
         $this->txts = new ArrayCollection();
+    }
+    public function __toString()
+    {
+        return $this->getName();
     }
 
     public function getId(): ?int
@@ -114,6 +123,18 @@ class Page
                 $txt->setPage(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getTemplate(): ?Template
+    {
+        return $this->template;
+    }
+
+    public function setTemplate(?Template $template): self
+    {
+        $this->template = $template;
 
         return $this;
     }

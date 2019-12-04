@@ -1,0 +1,7 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page{% endblock %}
+
+{% block body %}
+    {{ include(template_from_string(page.template.core|raw)) }}
+{% endblock %}
