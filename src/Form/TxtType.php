@@ -13,7 +13,7 @@ class TxtType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('core',CKEditorType::class);
+            ->add('txt',CKEditorType::class);
     }
 
     public function configureOptions(OptionsResolver $resolver)

@@ -5,8 +5,8 @@ easy_admin:
             form:
                 fields:
                     - { property: 'name'}
-                    - { property: 'blocks' }
-                    - { property: 'txts'}
+                    - { property: 'blocks', type: 'collection', type_options:{ entry_type: App\Form\BlockType , allow_delete: true , allow_add: true , by_reference: false }}
+                    - { property: 'txts', type: 'collection', type_options:{ entry_type: App\Form\TxtType , allow_delete: true , allow_add: true , by_reference: false }}
                     - { property: 'template'}
         Block:
             class: App\Entity\Block

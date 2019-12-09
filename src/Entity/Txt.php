@@ -22,7 +22,7 @@ class Txt
     private $name;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Page", inversedBy="txts")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Page", inversedBy="txts",cascade={"persist"})
      */
     private $page;
 
@@ -43,7 +43,7 @@ class Txt
 
     public function __toString()
     {
-        return $this->getName();
+        return $this->getTxt();
     }
 
     public function getId(): ?int

@@ -29,7 +29,7 @@ class Page
     private $blocks;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Txt", mappedBy="page")
+     * @ORM\OneToMany(targetEntity="App\Entity\Txt", mappedBy="page",cascade={"persist"})
      */
     private $txts;
 
